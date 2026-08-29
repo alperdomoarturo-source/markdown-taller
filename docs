@@ -12,23 +12,37 @@
 
 ## 3. Requerimientos Funcionales
 
-### RF-01 - [Nombre del requerimiento]
+### RF-01 - Registro de tutoría
 
 #### Resumen
+
+Permite a un profesor registrar una nueva tutoría académica en la plataforma, indicando la información necesaria para que los estudiantes puedan encontrarla posteriormente.
 
 #### Entradas
 
 | Entrada | Tipo de dato | Descripción |
 |---|---|---|
+| codigoProfesor | String | Código identificador del profesor que ofrece la tutoría |
+| tema | String | Tema o asignatura de la tutoría |
+| fecha | Date | Fecha programada para la tutoría |
+| horaInicio | Time | Hora de inicio de la tutoría |
+| cantidadMaxima | Integer | Cantidad máxima de estudiantes que podrán asistir |
 
 #### Reglas o condiciones
+
+- La fecha de la tutoría no puede ser anterior a la fecha actual.
+- La cantidad máxima de participantes debe estar entre 1 y 10 estudiantes.
 
 #### Salidas
 
 | Salida | Tipo de dato | Descripción |
 |---|---|---|
+| idTutoria | String | Identificador único asignado a la tutoría creada |
+| mensajeConfirmacion | String | Mensaje que informa al profesor que la tutoría fue creada correctamente |
 
 #### Resultado esperado
+
+La tutoría queda registrada en el sistema con un identificador único asignado automáticamente y se encuentra disponible para ser consultada por los estudiantes.
 
 
 ### RF-02 - [Nombre del requerimiento]
