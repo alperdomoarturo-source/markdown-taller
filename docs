@@ -45,23 +45,43 @@ Permite a un profesor registrar una nueva tutoría académica en la plataforma, 
 La tutoría queda registrada en el sistema con un identificador único asignado automáticamente y se encuentra disponible para ser consultada por los estudiantes.
 
 
-### RF-02 - [Nombre del requerimiento]
+### RF-02 - Consulta de tutorías disponibles
 
 #### Resumen
+Permite a los estudiantes buscar y consultar las tutorías académicas que se encuentran disponibles para una fecha específica, con la opción de filtrar por asignatura o tema de interés.
 
 #### Entradas
 
 | Entrada | Tipo de dato | Descripción |
 |---|---|---|
+| fecha | Date | Fecha que se desea consultar para buscar tutorías |
+| asignatura | String | Asignatura de interés (opcional) |
+| tema | String | Tema específico de interés (opcional) |
 
 #### Reglas o condiciones
+
+- La fecha es un parámetro obligatorio para la búsqueda.
+- La asignatura y el tema son parámetros opcionales.
+- El sistema debe buscar tutorías que coincidan con la fecha proporcionada.
+- Si se proporciona asignatura o tema, debe filtrar adicionalmente por estos criterios.
 
 #### Salidas
 
 | Salida | Tipo de dato | Descripción |
 |---|---|---|
+| listaTutorias | Array | Lista de tutorías encontradas con sus detalles |
+| mensajeInformacion | String | Mensaje informativo si no se encuentran tutorías |
+
+Para cada tutoría en la lista se muestra:
+- identificadorTutoria: Integer
+- tema: String
+- profesorResponsable: String
+- fecha: Date
+- hora: Time
+- cuposDisponibles: Integer
 
 #### Resultado esperado
+El sistema muestra al estudiante todas las tutorías disponibles que coinciden con los criterios de búsqueda, incluyendo el identificador, tema, profesor, fecha, hora y cupos disponibles. Si no se encuentran tutorías, se muestra un mensaje informativo indicando que no hay resultados.
 
 
 ### RF-03 - [Nombre del requerimiento]
