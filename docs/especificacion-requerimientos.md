@@ -73,7 +73,7 @@ Permite a los estudiantes buscar y consultar las tutorías académicas que se en
 | mensajeInformacion | String | Mensaje informativo si no se encuentran tutorías |
 
 Para cada tutoría en la lista se muestra:
-- identificadorTutoria: Integer
+- idTutoria: String
 - tema: String
 - profesorResponsable: String
 - fecha: Date
