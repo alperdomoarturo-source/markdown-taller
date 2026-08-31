@@ -103,23 +103,34 @@ El sistema muestra al estudiante todas las tutorías disponibles que coinciden c
 #### Resultado esperado
 
 
-### RF-04 - [Nombre del requerimiento]
+### RF-04 - Cancelacion de inscripcion
 
 #### Resumen
 
+Permite a un estudiante inscrito cancelar su participacion en una tutoria, lo que elimina su inscripcion del sistema y libera un cupo para que este disponible para otros estudiantes.
+
 #### Entradas
 
-| Entrada | Tipo de dato | Descripción |
+| Entrada | Tipo de dato | Descripcion |
 |---|---|---|
+| codigoEstudiante | String | Codigo estudiantil del estudiante que desea cancelar su inscripcion |
+| idTutoria | String | Identificador unico de la tutoria a la cual esta inscrito |
 
 #### Reglas o condiciones
 
+- Debe existir una inscripcion previa y activa del estudiante en la tutoria especificada.
+- La tutoria aun no debe haber comenzado (la fecha y hora programadas de inicio de la tutoria deben ser posteriores a la fecha y hora actual).
+
 #### Salidas
 
-| Salida | Tipo de dato | Descripción |
+| Salida | Tipo de dato | Descripcion |
 |---|---|---|
+| mensajeConfirmacion | String | Mensaje de exito informando que la inscripcion fue cancelada correctamente |
+| mensajeError | String | Mensaje que indica el motivo por el cual no se pudo realizar la cancelacion |
 
 #### Resultado esperado
+
+La inscripcion del estudiante es eliminada del sistema, el cupo en la tutoria se libera (incrementando la cantidad de cupos disponibles en 1) y se muestra un mensaje de confirmacion exitoso o de error indicando la causa del fallo.
 
 
 ## 4. Gestión de Versiones
