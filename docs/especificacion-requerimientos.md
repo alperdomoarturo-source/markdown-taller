@@ -133,10 +133,33 @@ Permite a un estudiante inscrito cancelar su participacion en una tutoria, lo qu
 La inscripcion del estudiante es eliminada del sistema, el cupo en la tutoria se libera (incrementando la cantidad de cupos disponibles en 1) y se muestra un mensaje de confirmacion exitoso o de error indicando la causa del fallo.
 
 
-## 4. Gestión de Versiones
+## 4. Gestion de Versiones
 
 ### Ramas utilizadas
 
-### Proceso de integración
+- main
+- develop
+- feature/rf01-registro-tutoria
+- feature/rf02-consulta-tutorias
+- feature/rf03-inscripcion-tutoria
+- feature/rf04-cancelacion-inscripcion
+
+### Proceso de integracion
+
+El flujo de trabajo implementado siguio la metodologia GitFlow:
+
+1. Se establecio la rama `main` como la linea base con la estructura inicial.
+2. Se creo la rama `develop` a partir de `main` para centralizar el desarrollo.
+3. Cada integrante desarrollo su requerimiento en una rama `feature/*` independiente originada desde `develop`.
+4. Al finalizar cada requerimiento, se integraron los cambios de vuelta a `develop` mediante Pull Requests.
+5. Finalmente, se integrara la rama `develop` de regreso a `main` para consolidar la version estable y final.
+
+Esquema del flujo:
+```text
+main -> develop -> feature/* -> develop -> main
+```
 
 ### Conflictos encontrados
+
+- Se presento un conflicto de estructura debido a que inicialmente se creo el documento en la raiz con el nombre `docs` (como archivo plano) en lugar de una carpeta `docs/` con el archivo `especificacion-requerimientos.md`. Esto se resolvio creando el directorio correspondiente y reubicando el archivo en la rama `develop`.
+- No se presentaron otros conflictos de fusion (merge) durante la integracion de las ramas de caracteristicas (features).
