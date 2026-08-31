@@ -4,11 +4,10 @@
 
 ## 2. Integrantes
 
-- Nombre:
-- Nombre:
-- Nombre:
-- Nombre:
-- Nombre:
+- Alvaro Perdomo
+- Samuel Alejandro Bolaños
+- Samuel Vasquez
+- Sebastian Delgado
 
 ## 3. Requerimientos Funcionales
 
